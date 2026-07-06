@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #023020;
+    color: #F3E5AB;
+}
+
+/* FIX: Add padding-top to body to account for fixed nav */
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background: #023020;
+    position: fixed;
+    top: 0;      
+    left: 0;     
+    width: 100%;
+    z-index: 1000; 
+    color: #F3E5AB;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #F3E5AB;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #E1C16E;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 80px; /* ADD: top padding to clear fixed nav */
+    margin-top: 0;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #F3E5AB;
+}
+
+.hero h3 {
+    margin: 20px 0;
+    color: #E1C16E;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+    color: #F3E5AB;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    background: #E1C16E;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #F3E5AB;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 100px 10%;
+    scroll-margin-top: 80px; /* ADD: prevents content from hiding behind fixed nav when scrolling */
+}
+
+h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 40px;
+    color: #F3E5AB;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #E1C16E;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #F3E5AB;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project {
+    background: #E1C16E;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    background: #F3E5AB;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #023020;
+}
+
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    header {
+        padding: 150px 15px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
