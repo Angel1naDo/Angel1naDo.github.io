@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #023020;
+    background: #683DFF;
     color: #F3E5AB;
 }
 
@@ -20,7 +20,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 25px 10%;
-    background: #023020;
+    background: #683DFF;
     position: fixed;
     top: 0;      
     left: 0;     
@@ -142,7 +142,7 @@ h2 {
 footer {
     text-align: center;
     padding: 30px;
-    background: #023020;
+    background: #683DFF;
 }
 
 @media (max-width: 700px) {
